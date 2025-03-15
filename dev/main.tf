@@ -1,5 +1,6 @@
 # Define the EC2 instance
-resource "aws_instance" "Prashanth" {
+module "EC2_VMs" {
+  source = "../modules/EC2_VMs"
   ami           = var.ami_id             # AMI ID for your EC2 instance
   instance_type = var.instance_type      # Instance type for your EC2 instance
 }
