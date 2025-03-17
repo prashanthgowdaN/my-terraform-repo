@@ -1,15 +1,17 @@
 terraform {
-  required_version = ">= 1.0.0"
-required_providers {
+  required_providers {
     aws = {
-      access_key = "AKIAVFIWISPQPCZOFGSO"
-      secret_access_key = "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"
       source  = "hashicorp/aws"
-      version = "~> 5.0"
+      version = "~> 3.0"
     }
   }
 }
 
+provider "aws" {
+  access_key = "AKIAVFIWISPQPCZOFGSO"
+  secret_access_key = "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"
+  region = "us-east-1"  # Use the desired AWS region
+}
 # main.tf (root directory)
 
 module "EC2_VM" {
