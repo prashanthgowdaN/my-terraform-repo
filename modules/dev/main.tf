@@ -1,20 +1,26 @@
 # Define the EC2 instance
-module "EC2_VMs" {
-  source = "github.com/prashanthgowdaN/my-terraform-repo//modules/main.tf"
-  ami           = var.ami_id             # AMI ID for your EC2 instance
-  instance_type = var.instance_type      # Instance type for your EC2 instance
+/* module "EC2_VMs" {
+ # source = "github.com/prashanthgowdaN/my-terraform-repo//modules/main.tf"
+  #ami           = var.ami_id             # AMI ID for your EC2 instance
+  #instance_type = var.instance_type      # Instance type for your EC2 instance
+}*/
+
+resource "aws_instance" "vm" {
+  ami           = var.ami_id
+  instance_type = var.instance_type
+  key_name      = var.key_name
+
+  tags = {
+    Name = var.instance_name
+    Environment = "dev"
+    TestENV     = "Destroy"
+  }
 }
 
 # Attach the NIC to the EC2 instance
 network_interface {
    network_interface_id = aws_network_interface.example.id
    device_index         = 0  # Attach to the first network interface
-  }
-
-# Attach tags to the instance
-  tags = {
-    Name = "prashanth"
-    Environment = "dev"
   }
 
 # Attach the EBS volume to the instance
