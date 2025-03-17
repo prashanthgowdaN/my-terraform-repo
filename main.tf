@@ -2,6 +2,8 @@ terraform {
   required_version = ">= 1.0.0"
 required_providers {
     aws = {
+      access_key = "AKIAVFIWISPQPCZOFGSO"
+      secret_access_key = "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"
       source  = "hashicorp/aws"
       version = "~> 5.0"
     }
