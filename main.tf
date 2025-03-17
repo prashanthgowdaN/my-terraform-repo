@@ -5,10 +5,10 @@ provider "aws" {
 }
 # main.tf (root directory)
 
-module "EC2_VM" {
-  source        = "./modules/EC2_Instance"  # Path to the module directory
-  instance_type = "t2.micro"
-  ami_id        = "ami-08b5b3a93ed654d19"  # Replace with your AMI ID
+module "EC2_VM01" {
+  source        =  "./modules/EC2_Instance"  # Path to the module directory
+  instance_type =  "var.aws_instance_type" 
+  ami_id        =  "var.aws_ami"  # Replace with your AMI ID
   #instance_name = "my-terraform-vm"
 }
 
