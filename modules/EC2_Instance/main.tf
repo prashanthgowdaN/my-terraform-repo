@@ -16,7 +16,6 @@ resource "aws_instance" "prashanthVM" {
  tags = {
     Name        = "TestVM"
     Environment = "Development"
-    Owner       = "John Doe"
     Project     = "Terraform-Project"
  }
 }
