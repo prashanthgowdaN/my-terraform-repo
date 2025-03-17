@@ -1,6 +1,6 @@
 # Define the EC2 instance
 module "EC2_VMs" {
-  source = "github.com/prashanthgowdaN/my-terraform-repo//modules/EC2_instance/"
+  source = "github.com/prashanthgowdaN/my-terraform-repo//modules/EC2_instance"
   ami           = var.ami_id             # AMI ID for your EC2 instance
   instance_type = var.instance_type      # Instance type for your EC2 instance
 }
