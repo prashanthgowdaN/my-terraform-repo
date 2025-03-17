@@ -8,9 +8,9 @@ terraform {
 }
 
 provider "aws" {
-  access_key = "AKIAVFIWISPQPCZOFGSO"
-  secret_access_key = "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"
-  region = "us-east-1"  # Use the desired AWS region
+  access_key = var.aws_access_key
+  secret_access_key = var.aws_secret_access_key
+  region = var.aws_region
 }
 # main.tf (root directory)
 
