@@ -1,4 +1,4 @@
-/*variable "aws_access_key" {
+variable "aws_access_key" {
   description = "The AWS access key"
   type        = string
 }
@@ -6,7 +6,7 @@
 variable "aws_secret_key" {
   description = "The AWS secret access key"
   type        = string
-}*/
+}
 
 variable "aws_region" {
   description = "The AWS region to launch the VM"
