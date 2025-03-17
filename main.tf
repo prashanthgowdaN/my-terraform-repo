@@ -1,23 +1,14 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 3.0"
-    }
-  }
-}
-
 provider "aws" {
-  access_key       = var.aws_access_key
-  secret_access_key = var.aws_secret_key
+  access_key       = var.access_key
+  secret_access_key = var.secret_key
 }
 # main.tf (root directory)
 
 module "EC2_VM" {
-  source        = "./modules/dev"  # Path to the module directory
-  aws_region    = "us-east-1"
-  instance_type = "t2.micro"
-  ami_id        = "ami-08b5b3a93ed654d19"  # Replace with your AMI ID
-  instance_name = "my-terraform-vm"
+  source        = "./modules/EC2_instance"  # Path to the module directory
+  #aws_region    = "us-east-1"
+  #instance_type = "t2.micro"
+  #ami_id        = "ami-08b5b3a93ed654d19"  # Replace with your AMI ID
+  #instance_name = "my-terraform-vm"
 }
 
