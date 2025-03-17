@@ -14,6 +14,12 @@ resource "aws_instance" "prashanthVM" {
   instance_type = "t2.micro"
 }
 
+tags = {
+    Name        = "TestVM"
+    Environment = "Development"
+    Owner       = "John Doe"
+    Project     = "Terraform-Project"
+
 output "instance_id" {
   value = aws_instance.prashanthVM.id
 }
