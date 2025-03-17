@@ -12,7 +12,7 @@ terraform {
 resource "aws_instance" "prashanthVM" {
   ami = "ami-08b5b3a93ed654d19"
   instance_type = "t2.micro"
-  key_name= "aws_key"
+  #key_name= "aws_key"
 }
 
 output "instance_id" {
