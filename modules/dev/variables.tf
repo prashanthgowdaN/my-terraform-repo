@@ -7,6 +7,13 @@ variable "aws_secret_key" {
   description = "The AWS secret access key"
   type        = string
 }
+
+variable "aws_region" {
+  description = "The AWS region to launch the VM"
+  type        = string
+  default     = "us-east-1"
+}
+
 variable "ami_id" {
   description = "The AMI ID to use for the EC2 instance"
   type        = string
@@ -18,18 +25,13 @@ variable "instance_type" {
   default     = "t2.micro"  # Default instance type
 }
 
-variable "vpc_id" {
-  description = "VPC ID where the instance will be created"
+variable "key_name" {
+  description = "The SSH key name for accessing the instance"
   type        = string
 }
 
-variable "subnet_id" {
-  description = "The subnet ID where the EC2 instance will be placed"
+variable "instance_name" {
+  description = "The name of the instance"
   type        = string
-}
-
-variable "disk_size" {
-  description = "Size of the EBS disk to be attached (in GB)"
-  type        = number
-  default     = 10  # Default disk size in GB
+  default     = "my-terraform-vm"
 }
