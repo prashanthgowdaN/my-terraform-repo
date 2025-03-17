@@ -10,7 +10,7 @@ required_providers {
 
 # main.tf (root directory)
 
-module "vm_module" {
+module "EC2_VM" {
   source        = "./modules/dev"  # Path to the module directory
   aws_region    = "us-east-1"
   instance_type = "t2.micro"
