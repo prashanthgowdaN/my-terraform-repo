@@ -4,5 +4,5 @@ provider "aws" {
   secret_key = var.aws_secret_key
 }
 module "prashanth_test_VM" {
-  source = ".//modules/dev"
+  source = "github.com/prashanthgowdaN/my-terraform-repo//modules/dev"
 }
