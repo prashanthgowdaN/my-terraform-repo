@@ -10,6 +10,7 @@ terraform {
 }
 
 resource "aws_instance" "testVM" {
+  source        = "github.com/prashanthgowdaN/my-terraform-repo//modules/EC2_VM"
   ami           = var.ami_id
   instance_type = var.instance_type
 }
