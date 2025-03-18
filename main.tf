@@ -7,8 +7,8 @@ provider "aws" {
 
 module "EC2_VM01" {
   source        =  "./modules/EC2_Instance"  # Path to the module directory
-  #instance_type =  "var.aws_instance_type" 
-  #ami_id        =  "var.aws_ami"  # Replace with your AMI ID
+  instance_type =  "var.aws_instance_type" 
+  ami_id        =  "var.aws_ami"  # Replace with your AMI ID
   #instance_name = "my-terraform-vm"
 }
 
