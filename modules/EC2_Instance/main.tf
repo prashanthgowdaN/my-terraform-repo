@@ -18,7 +18,6 @@ resource "aws_instance" "prashanthVM" {
     Environment = "Development"
     Project     = "Terraform-Project"
     owner       = "prashanthN"
-    Type        = "Destroy"
  }
 }
 output "instance_id" {
