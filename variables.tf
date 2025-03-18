@@ -16,7 +16,7 @@ variable "aws_region" {
   sensitive   = true 
 }
 
-variable "aws_instance_type" {
+/* variable "aws_instance_type" {
   description = "AWS Instance Type"
   type        = string 
   sensitive   = true 
@@ -26,4 +26,4 @@ variable "aws_ami_id" {
   description = "AWS Image type"
   type        = string 
   sensitive   = true 
-}
+}*/
