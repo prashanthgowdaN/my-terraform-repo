@@ -10,12 +10,5 @@ module "EC2_VM01" {
   instance_type =  "var.aws_instance_type" 
   ami_id        =  "var.aws_ami"  # Replace with yourI ID
   #instance_name = "my-terraform-vm"
-
- network_interface {
-    device_index = 0
-    subnet_id    = "subnet-0e67770a39a2f9715"
-    #security_groups = ["sg-xxxxxxxx"]
-    associate_public_ip_address = flase
-  }
 }
 
