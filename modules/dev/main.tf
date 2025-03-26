@@ -18,7 +18,7 @@ resource "aws_instance" "vm" {
 }
 
 # Attach the NIC to the EC2 instance
-/*network_interface {
+network_interface {
    network_interface_id = aws_network_interface.example.id
    device_index         = 0  # Attach to the first network interface
   }
@@ -54,4 +54,4 @@ resource "aws_security_group" "sg" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
-}*/
+}
