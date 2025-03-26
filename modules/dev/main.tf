@@ -17,27 +17,27 @@ resource "aws_instance" "vm" {
   }
 }
 
-# Attach the NIC to the EC2 instance
+# Attach the NIC to the EC2 instan
 network_interface {
    network_interface_id = aws_network_interface.additional.id
    device_index         = 1  # Attach to the first network interface
   }
 
 resource "aws_network_interface" "additional" {
-  subnet_id = var.subnet_id
+  subnet_id = "subnet-0e67770a39a2f9715"
   #private_ips = ["10.0.1.101"]
 }
 
 # Attach the EBS volume to the instance
   block_device {
     device_name = "/dev/sdh"  # This is the device name in the instance
-    volume_size = var.disk_size
+    volume_size = 5
     volume_type = "gp2"  # General Purpose SSD (can be changed to io1, st1, etc.)
+    delete_on_termination = true
  }
 
 # Optional: Associate public IP address
-  associate_public_ip_address = True
-}
+  #associate_public_ip_address = flase
 
 # Create a Security Group to allow SSH (port 22)
 resource "aws_security_group" "sg" {
