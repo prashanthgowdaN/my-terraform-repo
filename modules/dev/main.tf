@@ -17,16 +17,16 @@ resource "aws_instance" "vm" {
   }
 }
 
-# Attach the NIC to the EC2 instan
-network_interface {
-   network_interface_id = aws_network_interface.additional.id
-   device_index         = 1  # Attach to the first network interface
-  }
-
+# Attach the NIC to the EC2 instance
 resource "aws_network_interface" "additional" {
   subnet_id = "subnet-0e67770a39a2f9715"
   #private_ips = ["10.0.1.101"]
 }
+
+network_interface {
+   network_interface_id = aws_network_interface.additional.id
+   device_index         = 1  # Attach to the first network interface
+  }
 
 # Attach the EBS volume to the instance
   block_device {
