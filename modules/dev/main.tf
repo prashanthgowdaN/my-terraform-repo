@@ -36,12 +36,12 @@ resource "aws_network_interface" "my_nic" {
   }*/
 
 # Attach the EBS volume to the instance
-  block_device {
+block_device {
     device_name = "/dev/sdh"  # This is the device name in the instance
     volume_size = 5
     volume_type = "gp2"  # General Purpose SSD (can be changed to io1, st1, etc.)
     delete_on_termination = true
- }
+}
 
 # Optional: Associate public IP address
   #associate_public_ip_address = flase
