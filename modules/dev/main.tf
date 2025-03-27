@@ -33,7 +33,7 @@ resource "aws_network_interface" "my_nic" {
 /*network_interface {
    network_interface_id = aws_network_interface.additional.id
    device_index         = 1  # Attach to the first network interface
-  }*/
+  }
 
 # Attach the EBS volume to the instance
 resource "aws_ebs_volume" "my_volume" {
@@ -84,4 +84,4 @@ data "aws_subnet_ids" "default_subnet" {
 
 data "aws_security_group" "default_sg" {
   name = "default"  # Default security group
-}
+}*/
