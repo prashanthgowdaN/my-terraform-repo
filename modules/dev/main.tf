@@ -9,8 +9,10 @@ resource "aws_instance" "vm" {
   ami           = var.ami_id
   instance_type = var.instance_type
   key_name      = var.key_name
-
-  tags = {
+  subnet_id     = data.aws_subnet_ids.default_subnet.ids[0]  # Use the default subnet ID
+  vpc_security_group_ids = [data.aws_security_group.default_sg.id]  # Use the default security group
+  
+tags = {
     Name = var.instance_name
     Environment = "dev"
     TestENV     = "Destroy"
@@ -18,9 +20,14 @@ resource "aws_instance" "vm" {
 }
 
 # Attach the NIC to the EC2 instance
-resource "aws_network_interface" "additional" {
+resource "aws_network_interface" "my_nic" {
   subnet_id = "subnet-0e67770a39a2f9715"
-  #private_ips = ["10.0.1.101"]
+  security_groups = sg-0ad357215786f8d79  #[data.aws_security_group.default_sg.id]  # Attach to the default security group
+
+  attachment {
+    instance     = aws_instance.vm.id
+    device_index = 0  # Primary NIC (0)
+  }
 }
 
 network_interface {
@@ -58,4 +65,17 @@ resource "aws_security_group" "sg" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
+}
+
+# Data sources to retrieve default VPC, subnet, and security group
+data "aws_vpc" "default" {
+  default = true
+}
+
+data "aws_subnet_ids" "default_subnet" {
+  vpc_id = data.aws_vpc.default.id
+}
+
+data "aws_security_group" "default_sg" {
+  name = "default"  # Default security group
 }
