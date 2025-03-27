@@ -25,7 +25,7 @@ variable "instance_type" {
   default     = "t2.micro"  # Default instance type
 }
 
-variable "key_name" {
+/*variable "key_name" {
   description = "The SSH key name for accessing the instance"
   type        = string
 }
@@ -34,4 +34,4 @@ variable "instance_name" {
   description = "The name of the instance"
   type        = string
   default     = "my-terraform-vm"
-}
+}*/
