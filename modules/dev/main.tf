@@ -9,8 +9,8 @@ resource "aws_instance" "vm" {
   ami           = var.ami_id
   instance_type = var.instance_type
   key_name      = var.key_name
-  subnet_id     = data.aws_subnet_ids.default_subnet.ids[0]  # Use the default subnet ID
-  vpc_security_group_ids = [data.aws_security_group.default_sg.id]  # Use the default security group
+  #subnet_id     = data.aws_subnet_ids.default_subnet.ids[0]  # Use the default subnet ID
+  #vpc_security_group_ids = [data.aws_security_group.default_sg.id]  # Use the default security group
   
 tags = {
     Name = var.instance_name
