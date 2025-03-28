@@ -6,7 +6,7 @@
 }*/
 
 resource "aws_instance" "vm" {
-  ami_id         =  "var.aws_ami" 
+  ami_id         =  "ami-08b5b3a93ed654d19" 
   instance_type  = var.instance_type
   #key_name      = var.key_name
   #subnet_id     = data.aws_subnet_ids.default_subnet.ids[0]  # Use the default subnet ID
