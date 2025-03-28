@@ -9,8 +9,6 @@ module "EC2_VM01" {
   source        =  "./modules/dev"  # Path to the module directory
   instance_type =  "var.aws_instance_type" 
   ami_id        =  "var.aws_ami"  # Replace with yourI ID
-  access_key       = var.aws_access_key
-  secret_key       = var.aws_secret_key
   #instance_name = "my-terraform-vm"
 }
 
