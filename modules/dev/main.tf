@@ -19,7 +19,7 @@ tags = {
   }
 }
 
-# Attach the NIC to the EC2 instance
+/*# Attach the NIC to the EC2 instance
 resource "aws_network_interface" "my_nic" {
   subnet_id = "subnet-0e67770a39a2f9715"
   security_groups = sg-0ad357215786f8d79  #[data.aws_security_group.default_sg.id]  # Attach to the default security group
@@ -28,7 +28,7 @@ resource "aws_network_interface" "my_nic" {
     instance     = aws_instance.vm.id
     device_index = 0  # Primary NIC (0)
   }
-}
+}*?
 
 /*network_interface {
    network_interface_id = aws_network_interface.additional.id
