@@ -13,7 +13,7 @@ resource "aws_instance" "vm" {
   #vpc_security_group_ids = [data.aws_security_group.default_sg.id]  # Use the default security group
   
 tags = {
-    Name = var.instance_name
+    #Name = var.instance_name
     Environment = "dev"
     TestENV     = "Destroy"
   }
