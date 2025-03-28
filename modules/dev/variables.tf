@@ -1,4 +1,4 @@
-/*variable "aws_access_key" {
+variable "aws_access_key" {
   description = "The AWS access key"
   type        = string
 }
@@ -17,7 +17,7 @@ variable "aws_region" {
 variable "ami_id" {
   description = "The AMI ID to use for the EC2 instance"
   type        = string
-}*/
+}
 
 variable "instance_type" {
   description = "The type of instance to create"
