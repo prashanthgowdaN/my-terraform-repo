@@ -5,7 +5,7 @@ provider "aws" {
 }
 # main.tf (root directory)
 
-module "EC2_VM01" {
+module "EC2_VM02" {
   source        =  "./modules/dev"  # Path to the module directory
   instance_type =  "var.aws_instance_type" 
   ami_id        =  "ami-08b5b3a93ed654d19"  # Replace with yourI ID
