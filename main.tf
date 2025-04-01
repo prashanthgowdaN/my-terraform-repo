@@ -1,9 +1,22 @@
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "5.92.0"
+    }
+  }
+}
+
 provider "aws" {
+  # Configuration options
+}
+
+/*provider "aws" {
   version = "~> 5.0"
   #aws_access_key       = var.aws_access_key
   #aws_secret_key       = var.aws_secret_key
   region           = var.aws_region
-}
+}*/
 # main.tf (root directory)
 
 module "EC2_VM02" {
