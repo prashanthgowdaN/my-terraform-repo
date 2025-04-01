@@ -7,9 +7,9 @@ terraform {
   }
 }
 
-provider "aws" {
+/*provider "aws" {
   # Configuration options
-}
+}*/
 
 /*provider "aws" {
   version = "~> 5.0"
