@@ -8,7 +8,14 @@ terraform {
 }
 
 provider "aws" {
-  region           = var.aws_region
+  region = "us-west-1"
+  alias  = "west"
+}
+
+# Provider for US East (N. Virginia)
+provider "aws" {
+  region = "us-east-1"
+  alias  = "east"
 }
 
 # main.tf (root directory)
