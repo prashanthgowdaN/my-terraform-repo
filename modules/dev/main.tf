@@ -1,9 +1,26 @@
 # Define the EC2 instance
+module "TestingVM" {
+  source        =  "./modules  # Path to the module directory
+  instance_type  = "t2.micro" 
+  ami_id        =  "ami-08b5b3a93ed654d19"  # Replace with yourI ID
+  #instance_name = "my-terraform-vm"
+}
+tags = {
+    Name = "VMtest"
+    Environment = "dev"
+    TestENV     = "Destroy"
+  }
+}
+output "instance_id" {
+  value = aws_instance.TestVM.id
+}
+
+
 /* module "EC2_VMs" {
  # source = "github.com/prashanthgowdaN/my-terraform-repo//modules/main.tf"
   #ami           = var.ami_id             # AMI ID for your EC2 instance
   #instance_type = var.instance_type      # Instance type for your EC2 instance
-}*/
+}
 
 resource "aws_instance" "TestVM" {
   ami = "ami-08b5b3a93ed654d19" 
@@ -21,7 +38,7 @@ tags = {
 
 output "instance_id" {
   value = aws_instance.TestVM.id
-}
+}*/
 
 
 /*# Attach the NIC to the EC2 instance
@@ -33,7 +50,7 @@ resource "aws_network_interface" "my_nic" {
     instance     = aws_instance.vm.id
     device_index = 0  # Primary NIC (0)
   }
-}*?
+}*/
 
 /*network_interface {
    network_interface_id = aws_network_interface.additional.id
