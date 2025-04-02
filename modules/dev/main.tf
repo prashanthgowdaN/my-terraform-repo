@@ -5,7 +5,7 @@
   #instance_type = var.instance_type      # Instance type for your EC2 instance
 }*/
 
-resource "aws_instance" "Module_test" {
+resource "aws_instance" "TestVM" {
   ami = "ami-08b5b3a93ed654d19" 
   instance_type  = "t2.micro"
   #key_name      = var.key_name
