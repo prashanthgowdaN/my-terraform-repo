@@ -35,5 +35,6 @@ module "EC2_VM01" {
   ami_id        =  "ami-08b5b3a93ed654d19"  # Replace with yourI ID
   aws_access_key       = var.aws_access_key
   aws_secret_key       = var.aws_secret_key
+  region               = "us-west-1"
   #instance_name = "my-terraform-vm"
 }
