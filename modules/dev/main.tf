@@ -20,7 +20,7 @@ tags = {
 }
 
 output "instance_id" {
-  value = aws_instance.Moudule_test.id
+  value = aws_instance.TestVM.id
 }
 
 
