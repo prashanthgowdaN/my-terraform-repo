@@ -1,5 +1,5 @@
 # Define the EC2 instance
-module "TestingVM" {
+module "DevVM" {
   source        =  "./modules  # Path to the module directory
   instance_type  = "t2.micro" 
   ami_id        =  "ami-08b5b3a93ed654d19"  # Replace with yourI ID
