@@ -6,7 +6,11 @@ terraform {
     }
   }
 }
-
+provider "aws" {
+   region = "us-east-1"
+   access_key = "AKIAVFIWISPQLW3I7KCQ"
+   secret_key = "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"
+}
 # main.tf (root directory)
 
 /*module "EC2_VM02" {
