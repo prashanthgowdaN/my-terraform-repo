@@ -5,19 +5,24 @@
   #instance_type = var.instance_type      # Instance type for your EC2 instance
 }*/
 
-resource "aws_instance" "Modudle_test" {
+resource "aws_instance" "Module_test" {
   ami = "ami-08b5b3a93ed654d19" 
-  instance_type  = var.instance_type
+  instance_type  = "t2.micro"
   #key_name      = var.key_name
   #subnet_id     = data.aws_subnet_ids.default_subnet.ids[0]  # Use the default subnet ID
   #vpc_security_group_ids = [data.aws_security_group.default_sg.id]  # Use the default security group
   
 tags = {
-    #Name = var.instance_name
+    Name = "Module_test"
     Environment = "dev"
     TestENV     = "Destroy"
   }
 }
+
+output "instance_id" {
+  value = aws_instance.Moudule_test.id
+}
+
 
 /*# Attach the NIC to the EC2 instance
 resource "aws_network_interface" "my_nic" {
