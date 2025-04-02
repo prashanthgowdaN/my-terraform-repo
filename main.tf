@@ -28,6 +28,7 @@ resource "aws_instance" "Template" {
   #key_name      = var.key_name
   #subnet_id     = data.aws_subnet_ids.default_subnet.ids[0]  # Use the default subnet ID
   #vpc_security_group_ids = [data.aws_security_group.default_sg.id]  # Use the default security group
+}
 
 /*module "EC2_VM01" {
   source        =  "./modules/EC2_Instance"  # Path to the module directory
