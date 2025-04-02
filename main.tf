@@ -7,11 +7,9 @@ terraform {
   }
 }
 
-/*provider "aws" {
-  #aws_access_key       = var.aws_access_key
-  #aws_secret_key       = var.aws_secret_key
+provider "aws" {
   region           = var.aws_region
-}*/
+}
 
 # main.tf (root directory)
 
