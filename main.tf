@@ -6,15 +6,11 @@ terraform {
     }
   }
 }
-/*provider "aws" {
-  aws_access_key       = var.aws_access_key
-  aws_secret_key       = var.aws_secret_key
-  region           = var.aws_region
-}*/
+
 provider "aws" {
-  access_key = "AKIAVFIWISPQKP37YLH7"
-  secret_access_key = "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"
-  region  = "us-east-1"
+  #aws_access_key       = var.aws_access_key
+  #aws_secret_key       = var.aws_secret_key
+  region           = var.aws_region
 }
 
 # main.tf (root directory)
@@ -23,6 +19,8 @@ module "EC2_VM02" {
   source        =  "./modules/dev"  # Path to the module directory
   instance_type =  "var.aws_instance_type" 
   ami_id        =  "ami-08b5b3a93ed654d19"  # Replace with yourI ID
+  aws_access_key       = var.aws_access_key
+  aws_secret_key       = var.aws_secret_key
   #instance_name = "my-terraform-vm"
 }
 
