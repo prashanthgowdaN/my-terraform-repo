@@ -6,11 +6,15 @@ terraform {
     }
   }
 }
-
-provider "aws" {
+/*provider "aws" {
   aws_access_key       = var.aws_access_key
   aws_secret_key       = var.aws_secret_key
   region           = var.aws_region
+}*/
+provider "aws" {
+  access_key = "AKIAVFIWISPQKP37YLH7"
+  secret_access_key = "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"
+  region  = "us-east-1"
 }
 
 # main.tf (root directory)
