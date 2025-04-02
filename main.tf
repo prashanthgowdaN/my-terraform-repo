@@ -2,21 +2,16 @@ terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
-      version = "5.92.0"
+      version = "~> 5.0"
     }
   }
 }
 
-/*provider "aws" {
-  # Configuration options
-}*/
-
-/*provider "aws" {
-  version = "~> 5.0"
-  #aws_access_key       = var.aws_access_key
-  #aws_secret_key       = var.aws_secret_key
+provider "aws" {
+  aws_access_key       = var.aws_access_key
+  aws_secret_key       = var.aws_secret_key
   region           = var.aws_region
-}*/
+}
 
 # main.tf (root directory)
 
@@ -24,8 +19,6 @@ module "EC2_VM02" {
   source        =  "./modules/dev"  # Path to the module directory
   instance_type =  "var.aws_instance_type" 
   ami_id        =  "ami-08b5b3a93ed654d19"  # Replace with yourI ID
-  aws_access_key       = var.aws_access_key
-  aws_secret_key       = var.aws_secret_key
   #instance_name = "my-terraform-vm"
 }
 
