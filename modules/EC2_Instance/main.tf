@@ -11,7 +11,7 @@ tags = {
   }
 }
 output "instance_id" {
-  value = aws_instance.TestVM.id
+  value = aws_instance.EC2VMs.id
 }
 
 /*terraform {
