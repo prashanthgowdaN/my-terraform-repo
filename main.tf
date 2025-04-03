@@ -1,12 +1,6 @@
-provider "aws" {
-  region     = "us-east-1"      # Set your desired AWS region
-  access_key   = "AKIAVFIWISPQLW3I7KCQ"
-  secret_key   = "/ny2qqFiNaMObSAB7Xu1lauP5muQBS5FJ46kNeH6"
-}
-
 resource "aws_instance" "Template" {
   ami = "ami-08b5b3a93ed654d19" 
-  instance_type  = "t2.micro"
+  #instance_type  = "t2.micro"
   tags = {
      owner = "Prashanth"
   }
