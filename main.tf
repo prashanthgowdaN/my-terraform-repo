@@ -1,11 +1,24 @@
-module "EC2_VM01" {
-  source        =  "./modules/EC2_Instance"  # Path to the module directory
-  #instance_type =  "var.aws_instance_type" 
-  #ami_id        =  "ami-08b5b3a93ed654d19"  # Replace with yourI ID
+resource "aws_instance" "TestVM" {
+  instance_type =  var.instance_type 
+  ami_id        =  var.ami_id  # Replace with yourI ID
   #aws_access_key       = var.aws_access_key
   #aws_secret_key       = var.aws_secret_key
   #instance_name = "my-terraform-vm"
+  tags = {
+     Name = var.instance_name
+  }
 }
+
+output "instance_id" {
+  description = "The ID of the created EC2 instance"
+  value       = aws_instance.TestVM.id
+}
+
+output "public_ip" {
+  description = "The public IP of the created EC2 instance"
+  value       = aws_instance.TestVM.public_ip
+}
+
 
 /*terraform {
   required_providers {
