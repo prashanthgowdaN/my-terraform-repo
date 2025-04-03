@@ -1,7 +1,7 @@
 provider "aws" {
   region = "us-east-1"
-  aws_access_key = "AKIAVFIWISPQLW3I7KCQ"
-  aws_secret_key = "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"
+  access_key = "AKIAVFIWISPQLW3I7KCQ"
+  secret_key = "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"
 }
 
 module "vm01" {
