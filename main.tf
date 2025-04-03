@@ -1,4 +1,13 @@
-terraform {
+module "EC2_VM01" {
+  source        =  "./modules/EC2_Instance"  # Path to the module directory
+  #instance_type =  "var.aws_instance_type" 
+  #ami_id        =  "ami-08b5b3a93ed654d19"  # Replace with yourI ID
+  #aws_access_key       = var.aws_access_key
+  #aws_secret_key       = var.aws_secret_key
+  #instance_name = "my-terraform-vm"
+}
+
+/*terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
@@ -6,17 +15,7 @@ terraform {
     }
   }
 }
-
-module "EC2_VM01" {
-  source        =  "./modules/EC2_Instance"  # Path to the module directory
-  instance_type =  "var.aws_instance_type" 
-  ami_id        =  "ami-08b5b3a93ed654d19"  # Replace with yourI ID
-  #aws_access_key       = var.aws_access_key
-  #aws_secret_key       = var.aws_secret_key
-  #instance_name = "my-terraform-vm"
-}
-
-/*resource "aws_instance" "Template" {
+resource "aws_instance" "Template" {
   ami = "ami-08b5b3a93ed654d19" 
   instance_type  = "t2.micro"
   #key_name      = var.key_name
