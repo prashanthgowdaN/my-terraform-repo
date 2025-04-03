@@ -4,13 +4,23 @@ provider "aws" {
   secret_key   = "/ny2qqFiNaMObSAB7Xu1lauP5muQBS5FJ46kNeH6"
 }
 
-resource "aws_instance" "Template" {
+module "VM01" {
+  source        =  "./modules/test"  # Path to the module directory
+  #instance_type =  "var.aws_instance_type" 
+  #ami_id        =  "ami-08b5b3a93ed654d19"  # Replace with yourI ID
+  #aws_access_key       = var.aws_access_key
+  #aws_secret_key       = var.aws_secret_key
+  #instance_name = "my-terraform-vm"
+}
+
+
+/*resource "aws_instance" "Template" {
   ami = "ami-08b5b3a93ed654d19" 
   instance_type  = "t2.micro"
   tags = {
      owner = "Prashanth"
   }
-}  # Working command. Module VM is not working 
+}*/  # Working command. Module VM is not working 
 
 /*output "instance_id" {
   description = "The ID of the created EC2 instance"
