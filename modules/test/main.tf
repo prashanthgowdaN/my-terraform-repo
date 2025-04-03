@@ -6,7 +6,7 @@ provider "aws" {
 
 
 resource "aws_instance" "VM_1" {
-  ami_id         = "ami-08b5b3a93ed654d19"
+  ami_id         = var.ami_id
   instance_type  = "t2.micro"
   tags = {
      owner = "Prashanth1"
