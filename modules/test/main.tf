@@ -4,22 +4,22 @@ provider "aws" {
 
 module "vm_1" {
   source        = "./modules"
-  #ami_id        = var.ami_id
-  instance_type = var.instance_type
+  ami_id        = var.ami_id
+  #instance_type = var.instance_type
   instance_name = "dev-vm-1"
 }
 
 module "vm_2" {
   source        = "./modules"
-  #ami_id        = var.ami_id
-  instance_type = var.instance_type
+  ami_id        = var.ami_id
+  #instance_type = var.instance_type
   instance_name = "dev-vm-2"
 }
 
 module "vm_3" {
   source        = "./modules"
-  #ami_id        = var.ami_id
-  instance_type = var.instance_type
+  ami_id        = var.ami_id
+  #instance_type = var.instance_type
   instance_name = "dev-vm-3"
 }
 
