@@ -4,7 +4,32 @@ provider "aws" {
   secret_key   = "/ny2qqFiNaMObSAB7Xu1lauP5muQBS5FJ46kNeH6"
 }
 
-module "vm_1" {
+
+resource "aws_instance" "VM_1" {
+  ami = "ami-08b5b3a93ed654d19" 
+  #instance_type  = "t2.micro"
+  tags = {
+     owner = "Prashanth1"
+  }
+}
+
+resource "aws_instance" "VM_2" {
+  ami = "ami-08b5b3a93ed654d19" 
+  #instance_type  = "t2.micro"
+  tags = {
+     owner = "Prashanth2"
+  }
+}
+
+resource "aws_instance" "VM_3" {
+  ami = "ami-08b5b3a93ed654d19" 
+  #instance_type  = "t2.micro"
+  tags = {
+     owner = "Prashanth3"
+  }
+}
+
+/*module "vm_1" {
   source        = "./modules"
   ami_id        = var.ami_id
   #instance_type = var.instance_type
@@ -35,7 +60,7 @@ output "vm_2_instance_id" {
 
 output "vm_3_instance_id" {
   value = module.vm_3.instance_id
-}
+}*/
 
 
 /*module "TestingVM" {
