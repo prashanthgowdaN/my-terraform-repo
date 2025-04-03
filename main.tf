@@ -6,11 +6,6 @@ terraform {
     }
   }
 }
-provider "aws" {
-   region = "us-east-1"
-   #access_key = var.aws_access_key
-   #secret_key = var.aws_secret_key
-}
 
 module "EC2_VM01" {
   source        =  "./modules/EC2_Instance"  # Path to the module directory
