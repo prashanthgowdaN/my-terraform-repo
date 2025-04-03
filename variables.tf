@@ -1,21 +1,3 @@
-variable "ami_id" {
-  description = "AMI ID for EC2 instance"
-  type        = string
-  sensitive   = true 
-}
-
-variable "instance_type" {
-  description = "Type of EC2 instance"
-  type        = string
-  sensitive   = true 
-}
-
-variable "instance_name" {
-  description = "Name for the EC2 instance"
-  type        = string
-  sensitive   = true 
-}
-
 /*variable "aws_access_key" {
   description = "AWS Access Key ID"
   type        = string
