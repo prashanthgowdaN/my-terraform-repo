@@ -9,6 +9,12 @@ module "vm01" {
   instance_name = "testvm01"
 }
 
+tags = {
+    Name = "testvm01"
+    Environment = "Dev_testing"
+    TestENV     = "Destroy"
+  }
+
 output "instance_id" {
   value = module.vm01.instance_id
 }
