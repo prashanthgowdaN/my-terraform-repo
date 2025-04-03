@@ -4,7 +4,22 @@ provider "aws" {
   secret_key = "/ny2qqFiNaMObSAB7Xu1lauP5muQBS5FJ46kNeH6"
 }
 
-module "vm01" {
+resource "aws_instance" "prashanthVM" {
+  ami = "ami-08b5b3a93ed654d19"
+  instance_type = "t2.micro"
+
+ tags = {
+    Name        = "TestVM"
+    Environment = "Development"
+    Project     = "Terraform-Project"
+ }
+}
+output "instance_id" {
+  value = aws_instance.prashanthVM.id
+}
+
+
+/*module "vm01" {
   source        = "./modules"
   ami_id        = "ami-08b5b3a93ed654d19"
   instance_type = var.instance_type
@@ -25,7 +40,7 @@ output "public_ip" {
 }
 
 
-/*module "EC2VMs" {
+module "EC2VMs" {
   source        =  "./modules  # Path to the module directory
   instance_type  = "t2.micro" 
   ami_id        =  "ami-08b5b3a93ed654d19"  # Replace with yourI ID
@@ -50,18 +65,4 @@ terraform {
        version = "~> 5.0"
      }
    }
- }
-
-resource "aws_instance" "prashanthVM" {
-  ami = "ami-08b5b3a93ed654d19"
-  instance_type = "t2.micro"
-
- tags = {
-    Name        = "TestVM"
-    Environment = "Development"
-    Project     = "Terraform-Project"
- }
-}
-output "instance_id" {
-  value = aws_instance.prashanthVM.id
-}*/
+ }*/
