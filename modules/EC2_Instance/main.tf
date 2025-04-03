@@ -6,9 +6,8 @@ provider "aws" {
 
 module "vm01" {
   source        = "../modules"
-  ami_id        = var.ami_id
+  ami_id        = "ami-08b5b3a93ed654d19"
   instance_type = var.instance_type
-  instance_name = "testvm01"
 }
 
 tags = {
