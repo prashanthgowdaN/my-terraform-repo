@@ -1,6 +1,6 @@
 resource "aws_instance" "TestVM" {
   instance_type =  "t2.micro" 
-  #ami_id        =  "ami-08b5b3a93ed654d19"
+  ami_id        =  "ami-08b5b3a93ed654d19"
   tags = {
      owner = "Prashanth"
   }
