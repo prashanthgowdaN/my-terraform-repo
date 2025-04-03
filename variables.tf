@@ -1,4 +1,4 @@
-variable "aws_access_key" {
+/*variable "aws_access_key" {
   description = "AWS Access Key ID"
   type        = string
   sensitive   = true
@@ -22,7 +22,7 @@ variable "aws_instance_type" {
   sensitive   = true 
 }
 
-/*variable "aws_ami_id" {
+variable "aws_ami_id" {
   description = "AWS Image type"
   type        = string 
   sensitive   = true 
