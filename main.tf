@@ -1,5 +1,5 @@
 module "vm_1" {
-  source        = "./modules/test"
+  source        = "./modules/test/"
   ami_id        = var.ami_id
   #instance_type = var.instance_type
   instance_name = "dev-vm-1"
