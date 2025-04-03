@@ -5,8 +5,8 @@ provider "aws" {
 }
 
 resource "aws_instance" "prashanthVM" {
-  ami = "ami-08b5b3a93ed654d19"
-  instance_type = "t2.micro"
+  ami = var.aws_ami.id
+  instance_type = var.aws_instance_type
 
  tags = {
     Name        = "TestVM"
