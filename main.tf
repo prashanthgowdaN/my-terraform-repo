@@ -1,10 +1,17 @@
-resource "aws_instance" "Template" {
+module "vm_1" {
+  source        = "./modules/test"
+  ami_id        = var.ami_id
+  #instance_type = var.instance_type
+  instance_name = "dev-vm-1"
+}
+
+/*resource "aws_instance" "Template" {
   ami = "ami-08b5b3a93ed654d19" 
   #instance_type  = "t2.micro"
   tags = {
      owner = "Prashanth"
   }
-}
+}*/  # Working command. Module VM is not working 
 
 /*output "instance_id" {
   description = "The ID of the created EC2 instance"
