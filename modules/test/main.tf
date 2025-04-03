@@ -7,7 +7,7 @@ provider "aws" {
 
 resource "aws_instance" "VM_1" {
   ami = "ami-08b5b3a93ed654d19" 
-  #instance_type  = "t2.micro"
+  instance_type  = "t2.micro"
   tags = {
      owner = "Prashanth1"
   }
@@ -15,7 +15,7 @@ resource "aws_instance" "VM_1" {
 
 resource "aws_instance" "VM_2" {
   ami = "ami-08b5b3a93ed654d19" 
-  #instance_type  = "t2.micro"
+  instance_type  = "t2.micro"
   tags = {
      owner = "Prashanth2"
   }
@@ -23,7 +23,7 @@ resource "aws_instance" "VM_2" {
 
 resource "aws_instance" "VM_3" {
   ami = "ami-08b5b3a93ed654d19" 
-  #instance_type  = "t2.micro"
+  instance_type  = "t2.micro"
   tags = {
      owner = "Prashanth3"
   }
