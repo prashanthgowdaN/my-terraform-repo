@@ -2,7 +2,7 @@ resource "aws_instance" "TestVM" {
   #instance_type =  var.instance_type 
   ami_id        =  var.ami_id  # Replace with yourI ID
   tags = {
-     Name = var.instance_name
+     owner = "Prashanth"
   }
 }
 
