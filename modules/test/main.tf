@@ -6,24 +6,24 @@ provider "aws" {
 
 
 resource "aws_instance" "VM_1" {
-  ami_id         = var.ami_id
-  instance_type  = "t2.micro"
+  #ami_id         = var.ami_id
+  #instance_type  = "t2.micro"
   tags = {
      owner = "Prashanth1"
   }
 }
 
 resource "aws_instance" "VM_2" {
-  ami_id         = "ami-08b5b3a93ed654d19"
-  instance_type  = "t2.micro"
+  #ami_id         = "ami-08b5b3a93ed654d19"
+  #instance_type  = "t2.micro"
   tags = {
      owner = "Prashanth2"
   }
 }
 
 resource "aws_instance" "VM_3" {
-  ami_id         = "ami-08b5b3a93ed654d19"
-  instance_type  = "t2.micro"
+  #ami_id         = "ami-08b5b3a93ed654d19"
+  #instance_type  = "t2.micro"
   tags = {
      owner = "Prashanth3"
   }
