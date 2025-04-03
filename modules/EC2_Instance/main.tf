@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 module "vm01" {
-  source        = "../modules"
+  source        = "./modules"
   ami_id        = "ami-08b5b3a93ed654d19"
   instance_type = var.instance_type
 }
