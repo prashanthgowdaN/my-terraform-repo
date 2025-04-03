@@ -1,4 +1,4 @@
-variable "aws_ami_id" {
+/*variable "aws_ami_id" {
   description = "AWS Image type"
   type        = string 
   default     = "ami-08b5b3a93ed654d19"
@@ -26,4 +26,4 @@ variable "aws_instance_type" {
   description = "AWS Instance Type"
   type        = string 
   sensitive   = true 
-}
+}*/
