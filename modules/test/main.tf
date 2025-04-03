@@ -18,6 +18,8 @@ resource "aws_instance" "VM_2" {
   instance_type  = "t2.micro"
   tags = {
      owner = "Prashanth2"
+     Name  = "dev-VM-01"
+     key   = "Destroy"
   }
 }
 
