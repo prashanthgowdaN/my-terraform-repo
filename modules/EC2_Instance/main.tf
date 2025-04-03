@@ -1,4 +1,24 @@
-module "EC2VMs" {
+provider "aws" {
+  region = "us-east-1"
+}
+
+module "vm01" {
+  source        = "../modules"
+  ami_id        = var.ami_id
+  instance_type = var.instance_type
+  instance_name = "testvm01"
+}
+
+output "instance_id" {
+  value = module.vm01.instance_id
+}
+
+output "public_ip" {
+  value = module.vm01.public_ip
+}
+
+
+/*module "EC2VMs" {
   source        =  "./modules  # Path to the module directory
   instance_type  = "t2.micro" 
   ami_id        =  "ami-08b5b3a93ed654d19"  # Replace with yourI ID
@@ -14,7 +34,7 @@ output "instance_id" {
   value = aws_instance.EC2VMs.id
 }
 
-/*terraform {
+terraform {
    required_version = ">= 1.0.0"
  
    required_providers {
