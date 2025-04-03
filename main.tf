@@ -1,9 +1,6 @@
 resource "aws_instance" "TestVM" {
   instance_type =  var.instance_type 
   ami_id        =  var.ami_id  # Replace with yourI ID
-  #aws_access_key       = var.aws_access_key
-  #aws_secret_key       = var.aws_secret_key
-  #instance_name = "my-terraform-vm"
   tags = {
      Name = var.instance_name
   }
