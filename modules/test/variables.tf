@@ -1,16 +1,16 @@
-/*variable "aws_access_key" {
+variable "aws_access_key" {
   description = "AWS access key"
   type        = string
   sensitive   = true
-  default     = "AKIAVFIWISPQCTSYLCGD"
+  default     = "AKIAVFIWISPQA6UC7535"
 }
 
 variable "aws_secret_key" {
   description = "AWS secret key"
   type        = string
   sensitive   = true
-  default     = "C+4Sz7EKMOZBKktZmBh6qoKHtkAvmWC4f5NCZ7bn"
-}*/
+  default     = "YkYQXr3m2aExENL7kVlclE+s0CI7VQ1aKqCbq0tK"
+}
 
 variable "ami_id" {
   description = "AMI ID for EC2 in Dev environment"
