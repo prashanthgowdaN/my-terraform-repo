@@ -1,8 +1,8 @@
-/*provider "aws" {
+provider "aws" {
   region     = "us-east-1"      # Set your desired AWS region
-  #access_key   = var.access_key
-  #secret_key   = var.secret_key
-}*/
+  access_key   = "AKIAVFIWISPQCTSYLCGD"
+  secret_key   = "C+4Sz7EKMOZBKktZmBh6qoKHtkAvmWC4f5NCZ7bn"
+}
 
 
 resource "aws_instance" "VM_1" {
