@@ -7,7 +7,7 @@ provider "aws" {
 module "VM01" {
   source        =  "./modules/test"  # Path to the module directory
   instance_type =  "t2.micro" 
-  ami_id        =  "ami-08b5b3a93ed654d19"  # Replace with yourI ID
+  ami_id        =  "ami-060a84cbcb5c14844"  # Replace with yourI ID
   #access_key   = "AKIAVFIWISPQCN2UACWS"
   #secret_key   = "KD1Udy11ApMV143mk6VedWxSBWdKxvQqiZiym5JE"
   #instance_name = "my-terraform-vm"
