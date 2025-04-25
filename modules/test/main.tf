@@ -1,7 +1,7 @@
 provider "aws" {
   region     = "us-east-1"      # Set your desired AWS region
-  access_key   = var.aws_access_key
-  secret_key   = var.aws_secret_key
+  access_key   = "AKIAVFIWISPQCN2UACWS"
+  secret_key   = "KD1Udy11ApMV143mk6VedWxSBWdKxvQqiZiym5JE"
 }
 
 
