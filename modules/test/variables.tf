@@ -15,7 +15,7 @@ variable "aws_secret_key" {
 variable "ami_id" {
   description = "AMI ID for EC2 in Dev environment"
   type        = string
-  default     = "ami-08b5b3a93ed654d19"
+  default     = "ami-060a84cbcb5c14844"
 }
 
 variable "instance_type" {
