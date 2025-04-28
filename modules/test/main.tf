@@ -2,9 +2,6 @@ provider "aws" {
   region     = "us-east-2"      # Set your desired AWS region
   access_key   = "AKIAVFIWISPQNTDPQ6LE"
   secret_key   = "19E8jPfk69XblIEvlDxc+rEFB3rLfykWb0s1tjHz"
-  assume_role {
-    role_arn = "arn:aws:iam::354918372320:user/Terraformusers"
-  }
 }
 
 resource "aws_instance" "TestVM1" {
