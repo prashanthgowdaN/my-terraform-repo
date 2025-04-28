@@ -1,7 +1,7 @@
 provider "aws" {
   region     = "us-east-1"      # Set your desired AWS region
-  access_key   = "AKIAVFIWISPQNDBISYW5"
-  secret_key   = "37b58HWomG8Bda6bZ7eTzqVMOyU15kpAk7KJf1qv"
+  #access_key   = "AKIAVFIWISPQNDBISYW5"
+  #secret_key   = "37b58HWomG8Bda6bZ7eTzqVMOyU15kpAk7KJf1qv"
 }
 
 resource "aws_instance" "TestVM1" {
@@ -9,6 +9,7 @@ resource "aws_instance" "TestVM1" {
   instance_type  = "t2.micro"
   tags = {
      owner = "Prashanth1"
+     Name  = "dev-VM-02"
   }
 }
 
@@ -27,6 +28,7 @@ resource "aws_instance" "TestVM3" {
   instance_type  = "t2.micro"
   tags = {
      owner = "Prashanth3"
+     Name  = "dev-VM-03"
   }
 }
 
