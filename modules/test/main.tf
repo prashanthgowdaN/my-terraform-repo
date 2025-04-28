@@ -1,7 +1,7 @@
 provider "aws" {
   region     = "us-east-1"      # Set your desired AWS region
   access_key   = var.aws_access_key  #"AKIAVFIWISPQNDBISYW5"
-  secret_key   = var.aws_secret_kye  #"37b58HWomG8Bda6bZ7eTzqVMOyU15kpAk7KJf1qv"
+  secret_key   = var.aws_secret_key  #"37b58HWomG8Bda6bZ7eTzqVMOyU15kpAk7KJf1qv"
 }
 
 resource "aws_instance" "TestVM1" {
