@@ -1,5 +1,5 @@
 provider "aws" {
-  region     = "us-east-2"      # Set your desired AWS region
+  region     = "us-east-1"      # Set your desired AWS region
   access_key   = "AKIAVFIWISPQNDBISYW5"
   secret_key   = "37b58HWomG8Bda6bZ7eTzqVMOyU15kpAk7KJf1qv"
 }
