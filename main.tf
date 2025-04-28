@@ -1,15 +1,15 @@
 provider "aws" {
   region     = "us-east-1"      # Set your desired AWS region
-  #access_key   = "AKIAVFIWISPQNDBISYW5"
-  #secret_key   = "37b58HWomG8Bda6bZ7eTzqVMOyU15kpAk7KJf1qv"
+  access_key   = "AKIAVFIWISPQNDBISYW5"
+  secret_key   = "37b58HWomG8Bda6bZ7eTzqVMOyU15kpAk7KJf1qv"
 }
 
 module "VM01" {
   source        =  "./modules/test"  # Path to the module directory
   instance_type =  "t2.micro" 
   ami_id        =  "ami-0e449927258d45bc4"  # Replace with yourI ID
-  access_key   = "AKIAVFIWISPQNDBISYW5"
-  secret_key   = "37b58HWomG8Bda6bZ7eTzqVMOyU15kpAk7KJf1qv"
+  #access_key   = "AKIAVFIWISPQNDBISYW5"
+  #secret_key   = "37b58HWomG8Bda6bZ7eTzqVMOyU15kpAk7KJf1qv"
   #instance_name = "my-terraform-vm"
 }
 
