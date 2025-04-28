@@ -8,8 +8,8 @@ module "VM01" {
   source        =  "./modules/test"  # Path to the module directory
   instance_type =  "t2.micro" 
   ami_id        =  "ami-0e449927258d45bc4"  # Replace with yourI ID
-  #access_key   = "AKIAVFIWISPQCN2UACWS"
-  #secret_key   = "KD1Udy11ApMV143mk6VedWxSBWdKxvQqiZiym5JE"
+  access_key   = var.aws_access_key
+  secret_key   = var.aws_secret_key
   #instance_name = "my-terraform-vm"
 }
 
