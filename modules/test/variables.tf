@@ -2,14 +2,14 @@ variable "aws_access_key" {
   description = "AWS access key"
   type        = string
   sensitive   = true
-  default     = "AKIAVFIWISPQNDBISYW5"
+  #default     = "AKIAVFIWISPQNDBISYW5"
 }
 
 variable "aws_secret_key" {
   description = "AWS secret key"
   type        = string
   sensitive   = true
-  default     = "37b58HWomG8Bda6bZ7eTzqVMOyU15kpAk7KJf1qv"
+  #default     = "37b58HWomG8Bda6bZ7eTzqVMOyU15kpAk7KJf1qv"
 }
 
 variable "ami_id" {
