@@ -5,11 +5,11 @@ provider "aws" {
 }
 
 # Fetching the latest Amazon Linux 2 AMI
-data "aws_ami" "latest_amazon_linux" {
+data "aws_ami" "Amazon_Linux" {
   most_recent = true
 
-resource "aws_instance" "example" {
-  ami           = data.aws_ami.latest_amazon_linux.id
+resource "aws_instance" "VM01" {
+  ami           = data.aws_ami.Amazon_Linux.id
   instance_type = "t2.micro"
 }
 
