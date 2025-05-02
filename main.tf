@@ -8,6 +8,10 @@ provider "aws" {
 data "aws_ami" "latest_amazon_linux" {
   most_recent = true
 
+resource "aws_instance" "example" {
+  ami           = data.aws_ami.latest_amazon_linux.id
+  instance_type = "t2.micro"
+}
 
 /*module "VM01" {
   source        =  "./modules/test"  # Path to the module directory
