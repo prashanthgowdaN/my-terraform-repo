@@ -18,9 +18,9 @@ module "VM01" {
   tags = {
      owner = "Prashanth"
   }
-}*/  # Working command. Module VM is not working 
+}  # Working command. Module VM is not working 
 
-/*output "instance_id" {
+output "instance_id" {
   description = "The ID of the created EC2 instance"
   value       = aws_instance.TestVM.id
 }
@@ -28,10 +28,10 @@ module "VM01" {
 output "public_ip" {
   description = "The public IP of the created EC2 instance"
   value       = aws_instance.TestVM.public_ip
-}*/
+}
 
 
-/*terraform {
+terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
@@ -45,6 +45,6 @@ resource "aws_instance" "Template" {
   #key_name      = var.key_name
   #subnet_id     = data.aws_subnet_ids.default_subnet.ids[0]  # Use the default subnet ID
   #vpc_security_group_ids = [data.aws_security_group.default_sg.id]  # Use the default security group
-}
+}*/
 
 
