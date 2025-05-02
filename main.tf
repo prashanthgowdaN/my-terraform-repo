@@ -4,23 +4,12 @@ provider "aws" {
   secret_key   = "37b58HWomG8Bda6bZ7eTzqVMOyU15kpAk7KJf1qv"
 }
 
-# Fetching the latest Amazon Linux 2 AMI
-data "aws_ami" "Amazon_Linux" {
-  most_recent = true
-
-resource "aws_instance" "VM01" {
-  ami           = data.aws_ami.Amazon_Linux.id
-  instance_type = "t2.micro"
-}
-
-/*module "VM01" {
+module "VM01" {
   source        =  "./modules/test"  # Path to the module directory
   instance_type =  "t2.micro" 
   ami_id        =  "ami-0e449927258d45bc4"  # Replace with yourI ID
-  #access_key   = "AKIAVFIWISPQNDBISYW5"
-  #secret_key   = "37b58HWomG8Bda6bZ7eTzqVMOyU15kpAk7KJf1qv"
   #instance_name = "my-terraform-vm"
-}*/
+}
 
 
 /*resource "aws_instance" "Template" {
@@ -57,16 +46,5 @@ resource "aws_instance" "Template" {
   #subnet_id     = data.aws_subnet_ids.default_subnet.ids[0]  # Use the default subnet ID
   #vpc_security_group_ids = [data.aws_security_group.default_sg.id]  # Use the default security group
 }
-
-# main.tf (root directory)
-
-module "EC2_VM02" {
-  source        =  "./modules/dev"  # Path to the module directory
-  instance_type =  "var.aws_instance_type" 
-  ami_id        =  "ami-08b5b3a93ed654d19"  # Replace with yourI ID
-  aws_access_key       = var.aws_access_key
-  aws_secret_key       = var.aws_secret_key
-  #instance_name = "my-terraform-vm"
-}*/
 
 
