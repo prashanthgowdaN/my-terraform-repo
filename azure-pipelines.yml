@@ -1,4 +1,32 @@
-trigger:
+trigger"
+-  main
+
+Pool:
+  vmImage: 'ubuntu-latest'
+
+stages:
+-  stage: plan
+   displayname: 'Terraform Plan'
+   jobs:
+   -  job: TerraformPlan
+      displayname: 'Terraform Plan'
+      Steps:
+      - task: TerrformInstaller@0
+        inputs:
+          terraformVersion: 'lates'
+
+ 
+      - script: terraform init
+  	displayName: 'Terraform Init'
+
+      - script: terraform plan
+  	displayName: 'Terraform Plan'
+
+      - script: terraform apply -auto-approve
+  	displayName: 'Terraform Apply'
+
+
+/*trigger:
   branches:
     include:
       - main
@@ -22,5 +50,5 @@ steps:
   displayName: 'Terraform Apply'
   env:
     AWS_ACCESS_KEY_ID: $(AWS_ACCESS_KEY_ID)
-    AWS_SECRET_ACCESS_KEY: $(AWS_SECRET_ACCESS_KEY)
+    AWS_SECRET_ACCESS_KEY: $(AWS_SECRET_ACCESS_KEY)*/
 
