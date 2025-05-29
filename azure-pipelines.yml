@@ -12,11 +12,10 @@ stages:
       displayname: 'Terraform Plan'
       Steps:
        - task: TerrformInstaller@0
-        inputs:
-          terraformVersion: 'lates'
+         inputs:
+          terraformVersion: 'latest'
 
- 
-        - script: terraform init
+         - script: terraform init
   	      displayName: 'Terraform Init'
 
         - script: terraform plan
