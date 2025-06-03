@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: 'Hosted Agent'
+  vmImage: ubuntu-latest
 
 steps:
 - task: TerraformInstaller@1
